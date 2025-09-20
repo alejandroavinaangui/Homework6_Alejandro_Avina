@@ -29,8 +29,77 @@ struct ContentView: View {
                     .scaledToFill()
                     .foregroundStyle(.tint)
                     .ignoresSafeArea(.all)
+                
+                VStack{
+                    HStack{
+                        Image("movieOne")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        
+                        Image("theMovieTwo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        
+                        Image("movieThree")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                    }
+                    HStack{
+                        Image("movieFour")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        
+                        Image("movieFive")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        
+                        Image("movieSix")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                    }
+                    HStack{
+                        Image("movieOne")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        
+                        Image("theMovieTwo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        
+                        Image("movieThree")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                    }
+                }
            
-                    LazyHGrid(rows: columns , spacing: 3){
+                    /* LazyHGrid(rows: columns , spacing: 3){
                         
                         Image("movieOne")
                             .resizable()
@@ -94,6 +163,7 @@ struct ContentView: View {
                         
                         
                     }//.scaledToFit()
+                     */
                 
                  
             
