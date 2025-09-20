@@ -17,6 +17,13 @@ struct ContentView: View {
     var body: some View {
         
             ZStack(){
+                
+               /* Text("Miso")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.yellow)
+                    .zIndex(5) **/
+            
+                
                 Image("mainBackground")
                     .imageScale(.large)
                     .scaledToFill()
