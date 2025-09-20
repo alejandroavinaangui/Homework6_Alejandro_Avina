@@ -11,40 +11,92 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let columns = Array(repeating: GridItem(.fixed(200),spacing:50), count: 3)
+    
     var body: some View {
-        VStack {
-            ZStack{
+        
+            ZStack(){
                 Image("mainBackground")
                     .imageScale(.large)
                     .scaledToFill()
                     .foregroundStyle(.tint)
-                    .zIndex(0)
-                ScrollView(.horizontal,showsIndicators: true){
-                    HStack(spacing:10){
+                    .ignoresSafeArea(.all)
+           
+                    LazyHGrid(rows: columns , spacing: 3){
+                        
                         Image("movieOne")
                             .resizable()
-                            .scaledToFill()
+                            .scaledToFit()
+                            .frame(height:200)
                             .cornerRadius(20)
-                            .frame(width: 150, height: 200)
+                            .clipped()
+                        
                         Image("theMovieTwo")
                             .resizable()
-                            .scaledToFill()
+                            .scaledToFit()
+                            .frame(height:200)
                             .cornerRadius(20)
-                            .frame(width: 150, height: 200)
+                            .clipped()
+                        
                         Image("movieThree")
                             .resizable()
-                            .scaledToFill()
+                            .scaledToFit()
+                            .frame(height:200)
                             .cornerRadius(20)
-                            .frame(width: 150, height: 200)
-                    }
+                            .clipped()
+                        
+                        Image("movieFour")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(20)
+                            .clipped()
+                            .frame(height:200)
+                        Image("movieFive")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        
+                        Image("movieSix")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        Image("movieOne")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        
+                        Image("movieThree")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        Image("movieSix")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:200)
+                            .cornerRadius(20)
+                            .clipped()
+                        
+                        
+                    }//.scaledToFit()
+                
                  
-                }
+            
+                
                // .offset(y: -200)
             }
         }
-        .padding()
+       
     }
-}
+
 
 #Preview {
     ContentView()
