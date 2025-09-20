@@ -13,10 +13,34 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            ZStack{
+                Image("mainBackground")
+                    .imageScale(.large)
+                    .scaledToFill()
+                    .foregroundStyle(.tint)
+                    .zIndex(0)
+                ScrollView(.horizontal,showsIndicators: true){
+                    HStack(spacing:10){
+                        Image("movieOne")
+                            .resizable()
+                            .scaledToFill()
+                            .cornerRadius(20)
+                            .frame(width: 150, height: 200)
+                        Image("theMovieTwo")
+                            .resizable()
+                            .scaledToFill()
+                            .cornerRadius(20)
+                            .frame(width: 150, height: 200)
+                        Image("movieThree")
+                            .resizable()
+                            .scaledToFill()
+                            .cornerRadius(20)
+                            .frame(width: 150, height: 200)
+                    }
+                 
+                }
+               // .offset(y: -200)
+            }
         }
         .padding()
     }
